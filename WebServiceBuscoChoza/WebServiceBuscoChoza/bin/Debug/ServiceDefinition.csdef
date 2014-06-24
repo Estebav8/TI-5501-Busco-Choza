@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+  **********************************************************************************************
+
+  Este archivo se generó con una herramienta del archivo de proyecto: ServiceDefinition.csdef
+
+  Los cambios realizados en este archivo puede provocar un comportamiento incorrecto y se perderán si el archivo se vuelve a generar.
+
+  **********************************************************************************************
+-->
+<ServiceDefinition name="WebServiceBuscoChoza" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition" schemaVersion="2014-01.2.3">
+  <WebRole name="FrontEndBuscoChoza" vmsize="Small">
+    <Sites>
+      <Site name="Web">
+        <Bindings>
+          <Binding name="Endpoint1" endpointName="Endpoint1" />
+        </Bindings>
+      </Site>
+    </Sites>
+    <Endpoints>
+      <InputEndpoint name="Endpoint1" protocol="http" port="80" />
+    </Endpoints>
+    <Imports>
+      <Import moduleName="Diagnostics" />
+    </Imports>
+    <Contents>
+      <Content destination=".\">
+        <SourceDirectory path="D:\DS-BuscoChoza\WebServiceBuscoChoza\WebServiceBuscoChoza\rcf\Debug\FrontEndBuscoChozaContent\" />
+      </Content>
+    </Contents>
+  </WebRole>
+  <WebRole name="BackEndBuscoChoza" vmsize="Small">
+    <Sites>
+      <Site name="Web">
+        <Bindings>
+          <Binding name="Endpoint1" endpointName="Endpoint1" />
+        </Bindings>
+      </Site>
+    </Sites>
+    <Endpoints>
+      <InputEndpoint name="Endpoint1" protocol="http" port="8080" />
+    </Endpoints>
+    <Imports>
+      <Import moduleName="Diagnostics" />
+    </Imports>
+    <LocalResources>
+      <LocalStorage name="BackEndBuscoChoza.svclog" sizeInMB="1000" cleanOnRoleRecycle="false" />
+    </LocalResources>
+    <Contents>
+      <Content destination=".\">
+        <SourceDirectory path="D:\DS-BuscoChoza\WebServiceBuscoChoza\WebServiceBuscoChoza\rcf\Debug\BackEndBuscoChozaContent\" />
+      </Content>
+    </Contents>
+  </WebRole>
+</ServiceDefinition>
