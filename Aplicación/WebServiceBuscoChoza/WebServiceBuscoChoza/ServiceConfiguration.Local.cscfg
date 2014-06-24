@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="WebServiceBuscoChoza" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="4" osVersion="*" schemaVersion="2014-01.2.3">
+  <Role name="FrontEndBuscoChoza">
+    <Instances count="2" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=cloudbuscochoza;AccountKey=GvUkcf52PKibQKdwrCmuAzKvKuzhoML7I3rN64bIELTpXM/GsNtN9aDc/OdYRmMYO3LHRWoM9/GseSsVSvYAGg==" />
+    </ConfigurationSettings>
+  </Role>
+  <Role name="BackEndBuscoChoza">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+    </ConfigurationSettings>
+  </Role>
+</ServiceConfiguration>

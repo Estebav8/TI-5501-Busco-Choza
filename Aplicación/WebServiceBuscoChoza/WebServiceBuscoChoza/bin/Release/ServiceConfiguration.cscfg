@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+  **********************************************************************************************
+
+  Este archivo se generó con una herramienta del archivo de proyecto: ServiceConfiguration.Cloud.cscfg
+
+  Los cambios realizados en este archivo puede provocar un comportamiento incorrecto y se perderán si el archivo se vuelve a generar.
+
+  **********************************************************************************************
+-->
+<ServiceConfiguration serviceName="WebServiceBuscoChoza" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="4" osVersion="*" schemaVersion="2014-01.2.3">
+  <Role name="FrontEndBuscoChoza">
+    <Instances count="2" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=cloudbuscochoza;AccountKey=GvUkcf52PKibQKdwrCmuAzKvKuzhoML7I3rN64bIELTpXM/GsNtN9aDc/OdYRmMYO3LHRWoM9/GseSsVSvYAGg==" />
+    </ConfigurationSettings>
+  </Role>
+  <Role name="BackEndBuscoChoza">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=cloudservicebuscochoza;AccountKey=sEExUUVVqluR0zrl3DtjJ5akwl2sL/Shv1MO7vyuVG8+Og7BqjMDZvYFvq9HLUTjjEH6qJ7+CAoQmlr0953jKA==" />
+    </ConfigurationSettings>
+  </Role>
+</ServiceConfiguration>
